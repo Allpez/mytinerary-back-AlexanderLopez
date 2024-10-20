@@ -5,6 +5,10 @@ import cors from "cors" //Seguridad, nos permite tener un filtro para el control
 import morgan from "morgan" //Libreria que nos ayuda a llevar un registro de las peiciones en consola que recibimos.
 import routerIndex from "./router/index.js"
 
+//Importamops los middlewares
+import not_found_handler from "./middlewares/not_found_handler.js"
+import error_handler from "./middlewares/error_handler.js"
+import bad_request from "./middlewares/bad_request.js"
 
 const server = express(); //creamos la variable server donde se ejecutara express
 
@@ -24,6 +28,10 @@ console.log(process.env.PORT); //para ver las variables de entorno
 
 //Configuracion del router
 server.use('/api', routerIndex)
+server.use(bad_request)
+server.use(not_found_handler)
+server.use(error_handler)
+
 
 
 server.listen(PORT, ready) //utilizamos la propiedad "listen" para escuchar el puerto y levantar el servidor
