@@ -1,0 +1,1 @@
+import express from "express"; // Importamos express de la carpeta "node_modules", este archivo va a levantar la aplicacion
