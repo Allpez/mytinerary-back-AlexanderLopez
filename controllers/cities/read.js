@@ -1,96 +1,74 @@
 import City from "../../models/City.js";
-import mongoose from 'mongoose'
 
-let allCities = async (req, res) => {
+let allCities = async (req, res, next) => {
     try {
-        let city = await City.find()
+        let city = await City.find();
         return res.status(200).json({
             response: city
-        })
+        });
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error);
     }
-}
+};
 
-let citiesByID = async (req, res) => {
+let citiesByID = async (req, res, next) => {
     try {
         let idQuery = req.params.id;
-        if (!idQuery) {
-            return res.status(400).json({ message: 'Id query parameter is required' });
-        }
-        if (!mongoose.Types.ObjectId.isValid(idQuery)) {
-            return res.status(400).json({ message: 'Id not Found' });
-        }
         let city = await City.findById(idQuery);
-        if (!city) {
-            return res.status(400).json({ message: 'Id not Found' });
-        }
         return res.status(200).json({
             response: city
-        })
+        });
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error);
     }
-}
+};
 
-let citiesByName = async (req, res) => {
+let citiesByName = async (req, res, next) => {
     try {
-        let idQuery = req.params.name;
-        let city = await City.find({name:idQuery})
+        let nameQuery = req.params.name;
+        let city = await City.find({ name: nameQuery });
         return res.status(200).json({
             response: city
-        })
+        });
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error);
     }
-}
+};
 
-let citiesByContinent = async (req, res) => {
+let citiesByContinent = async (req, res, next) => {
     try {
-        let idQuery = req.params.continent;
-        let city = await City.find({continent:idQuery})
+        let continentQuery = req.params.continent;
+        let city = await City.find({ continent: continentQuery });
         return res.status(200).json({
             response: city
-        })
+        });
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error);
     }
-}
+};
 
-let citiesByLanguage = async (req, res) => {
+let citiesByLanguage = async (req, res, next) => {
     try {
-        let idQuery = req.params.language;
-        let city = await City.find({language:idQuery})
+        let languageQuery = req.params.language;
+        let city = await City.find({ language: languageQuery });
         return res.status(200).json({
             response: city
-        })
+        });
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error);
     }
-}
+};
 
-let citiesByVisa = async (req, res) => {
+let citiesByVisa = async (req, res, next) => {
     try {
-        let idQuery = req.params.visa;
-        let city = await City.find({isVisaRequired:idQuery})
+        let visaQuery = req.params.visa;
+        let city = await City.find({ isVisaRequired: visaQuery });
         return res.status(200).json({
             response: city
-        })
+        });
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error);
     }
-}
+};
 
-export { allCities, citiesByID, citiesByName, citiesByContinent, citiesByLanguage, citiesByVisa }
+export { allCities, citiesByID, citiesByName, citiesByContinent, citiesByLanguage, citiesByVisa };

@@ -44,7 +44,7 @@ let cities = [
     },
     {
         name: "Rome",
-        photo: "https://tourismmedia.italia.it/is/image/mitur/20220127150143-colosseo-roma-lazio-shutterstock-756032350-2?wid=1600&hei=900&fit=constrain,1&fmt=webp",
+        photo: "https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/E6C8/production/_96908095_gettyimages-539115110.jpg.webp",
         country: "Italy",
         continent: "Europe",
         description: "Known for ancient monuments like the Colosseum and the Vatican.",
