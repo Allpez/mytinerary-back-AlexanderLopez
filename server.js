@@ -24,14 +24,13 @@ server.use(express.urlencoded({ extended: true })) //Nos permite recibir paramet
 server.use(cors()) //filtro para controlar las peticiones externas / origenes cruzados
 server.use(morgan('dev')) // libreria que nos va a ayudar a controlar y ver las peticiones HTTP que lleguen al servidor
 
-console.log(process.env.PORT); //para ver las variables de entorno
 
 //Configuracion del router
 server.use('/api', routerIndex)
-server.use(bad_request)
-server.use(not_found_handler)
-server.use(error_handler)
+server.use(not_found_handler) //404
+server.use(bad_request) //400
+server.use(error_handler) //500
 
-
+console.log(process.env.PORT); //para ver las variables de entorno
 
 server.listen(PORT, ready) //utilizamos la propiedad "listen" para escuchar el puerto y levantar el servidor

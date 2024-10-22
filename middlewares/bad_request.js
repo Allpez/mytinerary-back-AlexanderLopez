@@ -1,15 +1,14 @@
-//Bad Request
+//Bad Request 400
 
 const bad_request = (error, req, res, next) => {
-    if (error.status === 400) {
+    console.log(error)
+    if (error.status = "bad Request") {
         return res.status(400).json({
-            //Manejo de error 400
             success: false,
-            response: error.message,
-            message: "Bad request: The parameter was not found or is invalid."
+            response: error,
+            message: 'Bad request: The parameter was not found or is invalid.'
         })
     }
-    next(error);
+    next(error)
 }
-
 export default bad_request
