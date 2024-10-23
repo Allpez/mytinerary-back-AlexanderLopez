@@ -10,5 +10,9 @@
   - npm i corps //
   - npm i morgan 
 
+crear archivo .env y configurar
+PORT = 8080
+password = Link para la base de datos en MongoDB enviado en el sprint2-MunHub-Lab
+
 
 
