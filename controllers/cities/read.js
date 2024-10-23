@@ -1,8 +1,17 @@
+//Los controladores son funciones que se utilizan para gestionar la lógica de la aplicación y manejar las solicitudes y respuestas del cliente.
+
 import City from "../../models/City.js";
 
 let allCities = async (req, res, next) => {
     try {
-        let city = await City.find();
+        let {name} = req.query 
+        let query = {} //Enviamos un objeto vacio, Traer todas las ciudades
+
+        if (name){
+            query.name = {$regex: '^'+name, $options: 'i'}//Prevalidaciones
+        }
+        
+        let city = await City.find(query);
         return res.status(200).json({
             response: city
         });
