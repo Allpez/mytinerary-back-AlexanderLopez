@@ -16,7 +16,7 @@ let cities = [
         currency: "Euro",
         language: "French",
         averageHotelCost: 150,
-        averageTemperature: 15,
+        averageTemperature: 15
     },
     {
         name: "Tokyo",
@@ -28,7 +28,7 @@ let cities = [
         currency: "Yen",
         language: "Japanese",
         averageHotelCost: 120,
-        averageTemperature: 18,
+        averageTemperature: 18
     },
     {
         name: "Sydney",
@@ -40,7 +40,7 @@ let cities = [
         currency: "Australian Dollar",
         language: "English",
         averageHotelCost: 200,
-        averageTemperature: 22,
+        averageTemperature: 22
     },
     {
         name: "Rome",
@@ -52,7 +52,7 @@ let cities = [
         currency: "Euro",
         language: "Italian",
         averageHotelCost: 140,
-        averageTemperature: 17,
+        averageTemperature: 17
     },
     {
         name: "Rio de Janeiro",
@@ -64,7 +64,7 @@ let cities = [
         currency: "Brazilian Real",
         language: "Portuguese",
         averageHotelCost: 100,
-        averageTemperature: 26,
+        averageTemperature: 26
     },
     {
         name: "Cape Town",
@@ -76,7 +76,7 @@ let cities = [
         currency: "South African Rand",
         language: "English",
         averageHotelCost: 110,
-        averageTemperature: 20,
+        averageTemperature: 20
     },
     {
         name: "Cairo",
@@ -88,7 +88,7 @@ let cities = [
         currency: "Egyptian Pound",
         language: "Arabic",
         averageHotelCost: 90,
-        averageTemperature: 28,
+        averageTemperature: 28
     },
     {
         name: "Bangkok",
@@ -100,7 +100,7 @@ let cities = [
         currency: "Thai Baht",
         language: "Thai",
         averageHotelCost: 60,
-        averageTemperature: 30,
+        averageTemperature: 30
     },
     {
         name: "Dubai",
@@ -112,7 +112,7 @@ let cities = [
         currency: "UAE Dirham",
         language: "Arabic",
         averageHotelCost: 180,
-        averageTemperature: 35,
+        averageTemperature: 35
     },
     {
         name: "London",
@@ -124,7 +124,7 @@ let cities = [
         currency: "Pound Sterling",
         language: "English",
         averageHotelCost: 230,
-        averageTemperature: 11,
+        averageTemperature: 11
     },
     {
         name: "Istanbul",
@@ -136,7 +136,7 @@ let cities = [
         currency: "Turkish Lira",
         language: "Turkish",
         averageHotelCost: 80,
-        averageTemperature: 16,
+        averageTemperature: 16
     },
     {
         name: "Los Angeles",
@@ -148,7 +148,7 @@ let cities = [
         currency: "USD",
         language: "English",
         averageHotelCost: 220,
-        averageTemperature: 20,
+        averageTemperature: 20
     },
     {
         name: "Beijing",
@@ -160,7 +160,7 @@ let cities = [
         currency: "Yuan",
         language: "Mandarin",
         averageHotelCost: 90,
-        averageTemperature: 14,
+        averageTemperature: 14
     },
     {
         name: "Singapore",
@@ -172,7 +172,7 @@ let cities = [
         currency: "Singapore Dollar",
         language: "English",
         averageHotelCost: 170,
-        averageTemperature: 28,
+        averageTemperature: 28
     },
     {
         name: "Moscow",
@@ -184,7 +184,7 @@ let cities = [
         currency: "Russian Ruble",
         language: "Russian",
         averageHotelCost: 70,
-        averageTemperature: 5,
+        averageTemperature: 5
     }
 ];
 

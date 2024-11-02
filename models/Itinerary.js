@@ -9,7 +9,8 @@ let schema = new Schema({ // Los datos de cual es el esquema de cada modelo.
     duration:{type:Number,required:true},
     likes:{type:Number,required:true},
     hashtags:{type:[String],required:true},
-    city: {type: Schema.Types.ObjectId, ref:'cities',required:true } //Propidad de tipo objectID, referenciada a la data cities (relaciones)
+    city: {type: Schema.Types.ObjectId, ref:'cities',required:true } //Propidad de tipo objectID, referenciada a la data cities 
+    //Relaciones: para hacer la relacion de la ciudad con los itinerarios
 },{
     timestamps:true // Este objeto guarda la fecha de creacion y modificación de cada objeto en el.
 })
