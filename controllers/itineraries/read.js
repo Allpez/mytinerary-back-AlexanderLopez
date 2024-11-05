@@ -18,7 +18,7 @@ let allItineraries = async (req, res, next) => {
         ///Para hacer la consulta
         //Populate nos permite buscar un campo especifico y traer la informacion relacionada. Ejecutar.
         //si se deja el segundo parametro de populate vacio ('') entoces traera todas las propiedades asociadas 
-        let itinerary = await Itinerary.find(query).populate('city', '_id').exec() //Relaciones entre documentos en mongo
+        let itinerary = await Itinerary.find(query).populate('cityId', '_id').exec() //Relaciones entre documentos en mongo
         return res.status(200).json({
             response: itinerary
         })
@@ -32,17 +32,10 @@ let itinerariesByCity = async (req, res, next) => {
         let nameQuery = req.params.name;
 
         // Encuentra la ciudad por su nombre para obtener su ID
-        let city = await City.findOne({ name: nameQuery });
+        let itineraries = await Itinerary.find({ cityId: nameQuery }).populate('cityId', 'name photo description').exec()
         
-        if (!city) {
+        if (!itineraries) {
             return res.status(404).json({ message: "City not found" });
-        }
-
-        // Usa el ID de la ciudad para buscar itinerarios relacionados
-        let itineraries = await Itinerary.find({ city: city._id });
-        
-        if (itineraries.length === 0) {
-            return res.status(404).json({ message: "No itineraries found for this city" });
         }
 
         return res.status(200).json({
