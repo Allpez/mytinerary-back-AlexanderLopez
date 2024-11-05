@@ -95,7 +95,7 @@ let itineraries = [
     },
     {
         name: "Angelina Jolie",
-        photo: "https://static.wikia.nocookie.net/disney/images/9/90/Angelina_Jolie.jpg/revision/latest/scale-to-width-down/776?cb=20180915095952&path-prefix=it",
+        photo: "https://img.rtve.es/imagenes/angelina-jolie-diez-peliculas-sexy-salt-tomb-raider-lara-croft-malefica-eternals/1642178118661.jpg",
         price: 5,
         duration: 8,
         likes: 0,
@@ -319,8 +319,8 @@ let itineraries = [
         cityId: "67184ff7a871865fbf737dd9"
     },
     {
-        name: "Henry Golding",
-        photo: "https://static.wikia.nocookie.net/gijoe/images/4/48/Henry_Golding.jpg/revision/latest?cb=20190815043343",
+        name: "denzel washington",
+        photo: "https://cdn.prod.www.spiegel.de/images/96413afa-0001-0004-0000-000001436605_w520_r0.6666666666666666_fpx48.99_fpy39.33.jpg",
         price: 5,
         duration: 6,
         likes: 0,
@@ -328,8 +328,8 @@ let itineraries = [
         cityId: "67184ff7a871865fbf737dda"
     },
     {
-        name: "Michelle Yeoh",
-        photo: "https://ew.com/thmb/5MoeWGRKPhNWqAZ3rzQRg40-yKo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Michelle-Yeoh-0325201918-be6bd396f29141a1beee76dbed336c44.jpg",
+        name: "Margot Robbie",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/5/57/SYDNEY%2C_AUSTRALIA_-_JANUARY_23_Margot_Robbie_arrives_at_the_Australian_Premiere_of_%27I%2C_Tonya%27_on_January_23%2C_2018_in_Sydney%2C_Australia_%2828074883999%29_%28cropped_2%29.jpg",
         price: 3,
         duration: 4,
         likes: 0,
