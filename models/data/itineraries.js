@@ -23,7 +23,7 @@ let itineraries = [
     },
     {
         name: "Tom Hanks",
-        photo: "https://static.wikia.nocookie.net/universo-reynandez/images/1/15/Tom_Hanks.webp/revision/latest?cb=20221007071949&path-prefix=es",
+        photo: "https://www.parismatch.com/lmnr/var/pm/public/media/image/Tom-Hanks_0.jpg?VersionId=vHdyzkRzQXKjE0.ykyxM7F9JgRCy2SRU",
         price: 5,
         duration: 7,
         likes: 0,
@@ -113,7 +113,7 @@ let itineraries = [
     },
     {
         name: "Tom Hanks",
-        photo: "https://static.wikia.nocookie.net/universo-reynandez/images/1/15/Tom_Hanks.webp/revision/latest?cb=20221007071949&path-prefix=es",
+        photo: "https://www.parismatch.com/lmnr/var/pm/public/media/image/Tom-Hanks_0.jpg?VersionId=vHdyzkRzQXKjE0.ykyxM7F9JgRCy2SRU",
         price: 4,
         duration: 6,
         likes: 0,
@@ -221,7 +221,7 @@ let itineraries = [
     },
     {
         name: "Idris Elba",
-        photo: "https://static.wikia.nocookie.net/theoffice/images/8/83/Idris_Elba.jpg/revision/latest?cb=20191229175055",
+        photo: "https://cdn.britannica.com/89/202689-050-EBD34C2B/Idris-Elba-2018.jpg",
         price: 4,
         duration: 6,
         likes: 0,
