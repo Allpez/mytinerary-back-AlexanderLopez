@@ -21,7 +21,7 @@ passport.use(
                         email: profile.emails[0].value,
                         photo: profile.photos[0].value,
                         online: false,
-                        password: profile.id,
+                        password: profile.id, //falta hashear el password, video 5:40
                     });
                     await user.save();
                 }
