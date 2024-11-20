@@ -4,6 +4,7 @@ import "./config/database.js" // Llamamos la conexion a la base de datos.
 import cors from "cors" //Seguridad, nos permite tener un filtro para el control de peticiones externas.
 import morgan from "morgan" //Libreria que nos ayuda a llevar un registro de las peiciones en consola que recibimos.
 import routerIndex from "./router/index.js"
+import unauthorized from './middlewares/unauthorized.js';
 
 //Importamops los middlewares
 import not_found_handler from "./middlewares/not_found_handler.js"
@@ -29,7 +30,9 @@ server.use(morgan('dev')) // libreria que nos va a ayudar a controlar y ver las 
 server.use('/api', routerIndex)
 server.use(not_found_handler) //404
 server.use(bad_request) //400
+server.use(unauthorized); //401
 server.use(error_handler) //500
+
 
 console.log(process.env.PORT); //para ver las variables de entorno
 

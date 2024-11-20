@@ -14,10 +14,11 @@ passport.use(
         },
         async (accessToken, refreshToken, profile, done) => {
             try {
-                // Buscar si el usuario existe
-                let user = await User.findOne({ email: profile.emails[0].value });
+                const user = await User.findOne({ email: profile.emails[0].value });
                 if (!user) {
-                    return done(null, false, { message: "You don't have a Google account created, Please sign up." });
+                    const error = new Error("You don't have a Google account created, Please sign up.");
+                    error.status = 401;
+                    return done(error, null);
                 }
                 return done(null, user);
             } catch (error) {
