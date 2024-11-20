@@ -1,3 +1,4 @@
+//Se usa el middleware para generar un hash a partir de la contraseña del usuario y darle un nivel de seguridad.
 import bcryptjs from "bcryptjs";
 
 export default async (req, res, next) => {

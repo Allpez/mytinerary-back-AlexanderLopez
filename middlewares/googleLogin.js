@@ -27,4 +27,4 @@ passport.use(
     )
 );
 
-export default passport.authenticate("google-login", { session: false });
+export default passport.authenticate("google-login", { session: false, scope: ['profile', 'email'] });

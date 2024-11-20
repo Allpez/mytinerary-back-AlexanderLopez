@@ -6,6 +6,8 @@ import generateToken from "../middlewares/generateToken.js";
 import signOut from "../controllers/auth/signOut.js";
 import googleLogin from "../middlewares/googleLogin.js";
 import googleRegister from "../middlewares/googleRegister.js";
+import createHash from "../middlewares/createHash.js";
+import passport from "../middlewares/passport.js";
 
 const routerAuth = Router();
 
@@ -18,6 +20,6 @@ routerAuth.get('/signIn/google/callback', googleLogin, generateToken, signIn);
 
 // Ruta de registro con Google
 routerAuth.get('/signUp/google', googleRegister);
-routerAuth.get('/signUp/google/callback', googleRegister, generateToken, signIn);
+routerAuth.get('/signUp/google/callback', googleRegister, generateToken, createHash, signIn);
 
 export default routerAuth;

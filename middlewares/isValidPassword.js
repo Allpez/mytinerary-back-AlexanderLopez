@@ -2,7 +2,7 @@
 
 import bcryptjs from "bcryptjs"
 
-export default (req,res,next) => {
+export default (req, res, next) => {
     let passwordBody = req.body.password
     let passwordDB = req.user.password
 

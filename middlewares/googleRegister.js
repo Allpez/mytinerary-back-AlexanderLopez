@@ -17,11 +17,13 @@ passport.use(
                 if (!user) {
                     // Crear un nuevo usuario si no existe
                     user = new User({
-                        name: profile.displayName,
+                        // name: profile.displayName,
+                        name: profile.name.givenName,
+                        lastname: profile.name.familyName,
                         email: profile.emails[0].value,
+                        password: profile.id, //falta hashear el password, video 5:40
                         photo: profile.photos[0].value,
                         online: false,
-                        password: profile.id, //falta hashear el password, video 5:40
                     });
                     await user.save();
                 }
