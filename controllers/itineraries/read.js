@@ -12,7 +12,7 @@ let allItineraries = async (req, res, next) => {
         let query = {} //Enviamos un objeto vacio, Traer todas las ciudades
 
         if (name) {
-            query.name = { $regex: '^' + name + '.*', $options: 'i' }//Prevalidaciones
+            query.name = { $regex: name + '.*', $options: 'i' }//Prevalidaciones
         }
 
         ///Para hacer la consulta

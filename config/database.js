@@ -4,7 +4,6 @@ import mongoose from "mongoose"; //Utilizamos la libreria mongoose para conectar
 
 let url = process.env.URI_MONGO// La URL de la conexion a la base de datos MondoDB.
 
-
 //Funcion que realiza la conexion a la base de datos.
 async function connectionDataBase() {
     try {
