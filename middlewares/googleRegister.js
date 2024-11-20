@@ -1,3 +1,4 @@
+import bcryptjs from "bcryptjs";
 import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import User from "../models/User.js";
@@ -12,16 +13,15 @@ passport.use(
         },
         async (accessToken, refreshToken, profile, done) => {
             try {
-                // Verificar si el usuario ya existe
                 let user = await User.findOne({ email: profile.emails[0].value });
                 if (!user) {
-                    // Crear un nuevo usuario si no existe
+                   
+                    const hashedPassword = bcryptjs.hashSync(profile.id, 10);
                     user = new User({
-                        // name: profile.displayName,
                         name: profile.name.givenName,
                         lastname: profile.name.familyName,
                         email: profile.emails[0].value,
-                        password: profile.id, //falta hashear el password, video 5:40
+                        password: hashedPassword,
                         photo: profile.photos[0].value,
                         online: false,
                     });
@@ -35,4 +35,4 @@ passport.use(
     )
 );
 
-export default passport.authenticate("google-register", { session: false });
+export default passport.authenticate("google-register", { session: false, scope: ['profile', 'email'] });

@@ -8,7 +8,7 @@ let schema = new Schema({
     email: { type: String, required: true },
     password: { type: String, required: true },
     photo: { type: String, required: true },
-    country: { type: String, required: true },
+    country: { type: String },
     online: { type: Boolean }
 }, {
     timestamps: true
