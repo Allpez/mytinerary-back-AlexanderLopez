@@ -8,7 +8,7 @@ import City from "../City.js" //Importamos para conectamos al model Cities.js.
 let cities = [
     {
         name: "Paris",
-        photo: "https://scontent.fbog19-1.fna.fbcdn.net/v/t39.30808-6/299844436_601604991665714_5368242212176082925_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFmbGcqHURud1tM29Prd9wWwHh5TL5YuCHAeHlMvli4IZ_zhoij46Aoh-Sp-c4THwg&_nc_ohc=dg0QsvflZCMQ7kNvgE0JFjx&_nc_zt=23&_nc_ht=scontent.fbog19-1.fna&_nc_gid=ASOvh1f3IJUiuFxtYp-CQwC&oh=00_AYAAAE-T2tz4stHr4aazs9jQNhmFpcH3dXtq1VC7Q1WOyA&oe=671B6930",
+        photo: "https://st.depositphotos.com/1038117/1246/i/450/depositphotos_12462950-stock-photo-color-of-autumn-in-paris.jpg",
         country: "France",
         continent: "Europe",
         description: "Paris is renowned for its world-famous landmarks such as the Eiffel Tower, the Louvre Museum, and the Notre-Dame Cathedral. Visitors enjoy a romantic ambiance filled with historical sites, art galleries, and cafes. Paris is also known for its haute couture and exquisite cuisine, making it a dream destination.",
