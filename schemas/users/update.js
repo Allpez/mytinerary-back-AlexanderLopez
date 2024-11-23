@@ -1,7 +1,7 @@
 import joi from "joi-oid"; //Extension de joi que añade un tipo de objectId
 
 const schema = joi.object({     // Creamos el schema que vamos a validar, es un objeto de joi.
-    _id: joi.objectId().required().messages({
+    _id: joi.objectId().messages({
         'any.required': 'El ID es requerido',
         'string.pattern.name': 'El ID debe ser un ObjectId válido'
     }),
@@ -28,6 +28,7 @@ const schema = joi.object({     // Creamos el schema que vamos a validar, es un 
             'any.required': 'El campo "lastname" es obligatorio.'
         }),
     email: joi.string()
+        .required()
         .email({ tlds: { allow: false } })
         .messages({
             'string.email': 'Debe ser un correo electrónico válido.',

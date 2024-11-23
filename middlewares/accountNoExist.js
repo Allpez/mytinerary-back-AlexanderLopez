@@ -6,7 +6,7 @@ export default async (req, res, next) => {
         let account = await User.findOne({ email: req.body.email })
         if (account) {             //Si el email existe entonces guardará la informacion que queramos en un ojeto.
             req.user = {
-                name: account.name,
+                firstname: account.firstname,
                 lastname: account.name,
                 email: account.email,
                 password: account.password,

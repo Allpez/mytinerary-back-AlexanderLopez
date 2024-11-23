@@ -4,7 +4,7 @@ import User from "../User.js"
 
 let users = [
     {
-        name: "Alexander",
+        firstname: "Alexander",
         lastname: "Lopez",
         email: "alexanderlopez@backend.com",
         password: "Alex1234!",
@@ -12,7 +12,7 @@ let users = [
         country: "Venezuela"
     },
     {
-        name: "Jose",
+        firstname: "Jose",
         lastname: "Lopez",
         email: "joselopez@backend.com",
         password: "Alex4321!",

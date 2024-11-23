@@ -1,7 +1,7 @@
 import joi from "joi";
 
 const schema = joi.object({
-    name: joi.string()
+    firstname: joi.string()
         .required()
         .pattern(/^[a-zA-Z\s]+$/) // Solo letras y espacios
         .min(3)
