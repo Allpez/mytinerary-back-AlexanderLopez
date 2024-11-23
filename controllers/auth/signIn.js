@@ -3,7 +3,7 @@ import User from "../../models/User.js";
 export default async (req, res, next) => {
     try {
         await User.findOneAndUpdate( //Recibe 2 objetos, 1.- Como lo va a buscar, 2-. cambia la sig. propiedad.
-            { email: req.body.email },
+            { email: req.body.email || req.user.email},
             { online: true }
         )
         console.log(req);
@@ -12,7 +12,7 @@ export default async (req, res, next) => {
             succes: true,
             message: "signed In",
             user: {
-                name: req.user.name,
+                firstname: req.user.firstname,
                 lastname: req.user.lastname,
                 email: req.user.email,
                 password: req.user.password,
