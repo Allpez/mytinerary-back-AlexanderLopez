@@ -12,7 +12,7 @@ export default passport.use(            //Funcion de la libreria passport que se
         },
         async (jwt_payload, done) => {      //La funcion recibe el token desencriptado y done para pasar al sig con informacion
             try {
-                let user = await User.findOne({ email: jwt_payload.email })
+                let user = await User.findOne({ email: jwt_payload.email, online: true })
 
                 if (user) {
                     return done(null, user) //Recibe: Si hubo un error? y los datos del usuario autenticado.

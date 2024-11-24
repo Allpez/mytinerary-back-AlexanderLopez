@@ -1,4 +1,6 @@
 import { Router } from "express";
+
+//Rutas
 import signIn from "../controllers/auth/signIn.js";
 import signUp from "../controllers/auth/signUp.js"; 
 import signOut from "../controllers/auth/signOut.js";
@@ -16,11 +18,11 @@ const routerAuth = Router()
 // Ruta para el inicio de sesión
 routerAuth.post('/signIn', accountNoExist, isValidPassword, generateToken, signIn)
 
-// Ruta para cerrar sesión
-routerAuth.post('/signOut', passport.authenticate('jwt', { session: false }), signOut)
-
 // Ruta para registrar un nuevo usuario
 routerAuth.post('/signUp', accountNoExist, signUp);
+
+// Ruta para cerrar sesión
+routerAuth.post('/signOut', passport.authenticate('jwt', { session: false }), signOut)
 
 
 //Ruta para iniciar sesion con Google.

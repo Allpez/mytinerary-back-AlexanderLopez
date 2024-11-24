@@ -35,7 +35,7 @@ export default passport.use(
                     })
                     await user.save()
                 }
-                return done(null, user)
+                return done(null, user)//Envia: El error / lo que enviara en el request 
 
             } catch (error) {
                 return done(error, null)

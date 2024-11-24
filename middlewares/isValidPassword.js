@@ -6,9 +6,9 @@ export default (req, res, next) => {
     let passwordBody = req.body.password
     let passwordDB = req.user.password
 
-    let compare = bcryptjs.compareSync( //Recibe 2 parametros, la contraseña que tiene que hashear y comparar, contra quien la va a comparar.
-        passwordBody,
-        passwordDB
+    let compare = bcryptjs.compareSync( //Recibe 2 parametros y comparar
+        passwordBody,                   //La contraseña que tiene que hashear.
+        passwordDB                      //Contra que, va a comparar la contaseña.
     )
     if (compare) {
         delete req.body.password

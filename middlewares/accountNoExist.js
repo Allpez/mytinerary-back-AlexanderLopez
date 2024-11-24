@@ -7,11 +7,12 @@ export default async (req, res, next) => {
         if (account) {             //Si el email existe entonces guardará la informacion que queramos en un ojeto.
             req.user = {
                 firstname: account.firstname,
-                lastname: account.name,
+                lastname: account.lastname,
                 email: account.email,
                 password: account.password,
                 photo: account.photo,
                 country: account.country,
+                online: account.online
             }
             return next()
         }
