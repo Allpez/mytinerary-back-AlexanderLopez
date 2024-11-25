@@ -16,7 +16,7 @@ routerUsers.get('/all', passport.authenticate('jwt', { session: false }), allUse
 routerUsers.get('/id/:id', passport.authenticate('jwt', { session: false }), usersByID)
 routerUsers.get('/name/:name', passport.authenticate('jwt', { session: false }), usersByName)
 routerUsers.post('/register', validator(schemaUsersRegister), accountExists, createHash, register)
-routerUsers.put('/update', passport.authenticate('jwt', { session: false }), validator(schemaUsersUpdate), createHash, update)
+routerUsers.put('/update', passport.authenticate('jwt', { session: false }), validator(schemaUsersUpdate), update)
 routerUsers.delete('/deleteOne', passport.authenticate('jwt', { session: false }), deleteOne)
 routerUsers.delete('/deleteMany', passport.authenticate('jwt', { session: false }), deleteManyUsers.destroy)
 routerUsers.get('/validateToken', passport.authenticate('jwt', { session: false }), userValidate)

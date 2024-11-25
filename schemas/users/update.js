@@ -28,7 +28,6 @@ const schema = joi.object({     // Creamos el schema que vamos a validar, es un 
             'any.required': 'El campo "lastname" es obligatorio.'
         }),
     email: joi.string()
-        .required()
         .email({ tlds: { allow: false } })
         .messages({
             'string.email': 'Debe ser un correo electrónico válido.',
