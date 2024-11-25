@@ -19,14 +19,17 @@ export default async (req, res, next) => {
         }
 
         // Encriptamos la contraseña
-        const hashedPassword = await bcryptjs.hash(password, 10);
+        const hashedPassword = bcryptjs.hashSync(
+            res.body.password,
+            10
+        );    
 
         // Creamos un nuevo usuario
         const newUser = new User({
             firstname: res.body.firstname,
             lastname: res.body.lastname,
             email: res.body.email,
-            password: res.body.password,
+            password: hashedPassword,
             photo: res.body.photo,
             country: res.body.country
 });
