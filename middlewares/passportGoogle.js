@@ -2,6 +2,7 @@ import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20"; 
 import User from "../models/User.js";
 import bcryptjs from "bcryptjs";
+import "dotenv/config.js"
 
 export default passport.use(
     new GoogleStrategy(  
@@ -25,7 +26,7 @@ export default passport.use(
                         lastname: profile.name.familyName,
                         email: profile.emails[0].value,
                         password: hashedPassword, 
-                        photo: profile.photos ? profile.photos[0].value : null,
+                        photo: profile.photos ? profile.photos[0].value : "https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png",
                         country: null,
                         online: false,
                     });
