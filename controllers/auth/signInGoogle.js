@@ -7,7 +7,7 @@ export default async (req, res, next) => {
             { online: true }
         );
 
-        return res.redirect('http://localhost:5173/home?token='+req.token); 
+        return res.redirect('https://mytinerary-bc080.web.app//home?token='+req.token); 
     } catch (error) {
         next(error); 
     }
